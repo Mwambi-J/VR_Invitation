@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Création de tables</title>
+
+   <link rel="stylesheet" href="liste.css">
+</head>
+<body>
+    <div id="containeur">
+        <div class="side-bar">
+            <p>
+                <a href="parametre">Menu</a>
+            </p>
+        </div>
+
+        <div class="info-content">
+            <h1>LISTE DES INVITES</h1>
+            <div id="entete">
+                <div id="nbr-table">
+                    <label for="tableCount">Nombre de tables :</label><br>
+                    <input type="number" id="tableCount" min="1" max="10" value="0">
+                    <button onclick="createTables()" id="btnCreateTable">Créer</button>
+                </div>
+                <div id="inviteNbrContainer">
+                    <label for="inviteNbr">Nombre d'invités :</label><br>
+                    <input type="number" id="inviteNbr" min="1" value="0">
+                </div>
+            </div>
+            <div id="tablesContainer"></div>
+            <div id="invitationContainer"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script defer src="liste.js"></script>
+
+</body>
+</html>

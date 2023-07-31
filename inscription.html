@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inscription</title>
+</head>
+<body>
+    <h1>Inscription</h1>
+    <form id="signup-form">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="confirm-password">Confirmer le mot de passe:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <br>
+        <label for="show-password">Voir le mot de passe:</label>
+        <input type="checkbox" id="show-password">
+        <br>
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <!-- Inclure la bibliothèque Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+        // Votre configuration Firebase
+        const firebaseConfig = {
+        apiKey: "AIzaSyCoUgTF0BKnoZwH77H-LmbFWRq_m4S0QrE",
+        authDomain: "virtual-invitation-aa712.firebaseapp.com",
+        projectId: "virtual-invitation-aa712",
+        storageBucket: "virtual-invitation-aa712.appspot.com",
+        messagingSenderId: "79063349854",
+        appId: "1:79063349854:web:98f56062c49e6133e712cf",
+        measurementId: "G-ZPVNDYRPGK"
+};
+
+        // Initialiser Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Récupérer le formulaire d'inscription et ajouter un écouteur d'événement
+        var signupForm = document.getElementById('signup-form');
+        signupForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert("Les mots de passe ne correspondent pas.");
+                return;
+            }
+
+            // Utiliser Firebase pour créer un nouvel utilisateur
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then(function (userCredential) {
+                    // Rediriger l'utilisateur vers la page de connexion après une inscription réussie
+                    window.location.href = 'connexion.html';
+                })
+                .catch(function (error) {
+                    // Gérer les erreurs d'inscription ici
+                    console.log(error.message);
+                });
+        });
+
+        // Afficher ou masquer le mot de passe lorsque la case est cochée/décochée
+        var showPasswordCheckbox = document.getElementById('show-password');
+        showPasswordCheckbox.addEventListener('change', function () {
+            var passwordInput = document.getElementById('password');
+            var confirmPasswordInput = document.getElementById('confirm-password');
+            if (showPasswordCheckbox.checked) {
+                passwordInput.type = 'text';
+                confirmPasswordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+                confirmPasswordInput.type = 'password';
+            }
+        });
+    </script>
+</body>
+</html>

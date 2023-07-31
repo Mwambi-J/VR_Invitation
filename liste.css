@@ -1,0 +1,239 @@
+
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: rgb(247, 241, 233);
+        }
+
+        h1 {
+            height: 70px;
+            text-align: left;
+            background: #fff;
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size:x-large ;
+            border-radius: 10px;
+            padding-top: 30px;
+            padding-left: 20px;
+            color: #7e2489;
+            box-shadow: black;
+            margin-right: 30px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+        }
+
+        
+        #containeur{
+            display: flex;
+            width: 100%;
+        }
+
+        .side-bar{
+            width: 200px;
+            height: 200vh;
+            border: solid 1px;
+            background-image:linear-gradient(45deg, #df4881, #c430d7);
+            color: #fff;
+            text-align: center;
+        }
+
+        .info-content{
+            display: flex;
+            flex-direction: column;
+            width: 1080px;
+        }
+
+        #entete{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 30px;
+            background: #fff;
+            border-radius: 10px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: 0;
+            margin-right: 30px;
+        }
+
+        #nbr-table{
+            background-image:linear-gradient(45deg, #df4881, #c430d7);
+            height: 100px;
+            padding-top: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            width: 250px;
+            padding-left: 10px;
+            color: #fff;
+
+        }
+
+        #tablesContainer{
+            padding-top: 50px;
+            padding-left: 30px;
+            margin: 30px 30px 30px 30px;
+            margin-left: 0px;
+            background: #fff;
+            border-radius: 40px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        
+        #tableCount{
+            background:#ffffff;
+            border: none;
+            height: 40px;
+            font-size:xx-large;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+        }
+
+        #btnCreateTable{
+            width: 70px;
+            background: #f2bce4;
+            color: #ffffff;
+            border-radius: 10px;
+            height: 50px;
+            font-size:large;
+            font-weight: bold;
+            position: relative;
+            bottom: 6px;
+            left: 10px;
+            
+
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        #inviteNbrContainer{
+            background-image:linear-gradient(45deg, #df4881, #c430d7);
+            height: 100px;
+            padding-top: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            width: 250px;
+            padding-left: 10px;
+            color: #fff;
+
+        }
+
+        #inviteNbr{
+            background:#ffffff;
+            border: none;
+            height: 40px;
+            font-size:xx-large;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-weight: 700;
+            width: 90px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #c430d7;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #7e2489;
+        }
+
+        .table {
+            margin-bottom: 20px;
+        }
+
+        .table input[type="text"] {
+            width: 200px;
+        }
+
+        .nom-Table{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background: #c430d7;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            padding: 16px;
+            font-weight:bolder;
+            font-size: large;
+        }
+
+        .nom-Table:focus{
+            border:none;
+            border-color: #fff;
+
+        }
+
+        .table button {
+            margin-left: 10px;
+        }
+
+        .guest-list {
+            margin-top: 10px;
+            padding-left: 0;
+            list-style-position:initial;
+
+        }
+
+        li{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            list-style: decimal;
+        }
+
+
+
+
+        /* MESSAGE D'INVITATION */
+
+        #msginvitation{
+            text-align: left;
+            display: flex;
+            background: #fff;
+            margin-right: 28px;
+            padding :20px 20px 20px 20px;
+            border-radius: 20px;
+            line-height: 30px;
+            width: 100%;
+
+        }
+
+        #monMsg{
+            margin-top: 10px;
+            
+        }
+
+        #name{
+         
+            font-weight: bold;
+        }
+
+
+
+        #mon-img img{
+            width: 240px;
+        }
+
+    
